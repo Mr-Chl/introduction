@@ -1,0 +1,535 @@
+@charset "UTF-8";
+/* line 1, style.scss */
+* {
+  margin: 0px;
+  padding: 0px;
+  font-size: 0.12rem;
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Microsoft YaHei'; }
+
+/* line 9, style.scss */
+ul, li {
+  list-style: none; }
+
+/* line 12, style.scss */
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent; }
+
+/* line 16, style.scss */
+html {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 100px; }
+
+/* line 26, style.scss */
+img, div, body, html, ul, li, a {
+  -webkit-touch-callout: none; }
+
+/* line 30, style.scss */
+input {
+  -webkit-appearance: none; }
+
+/* line 34, style.scss */
+.nav ul li, .main .menu ul, .main .menu ul li, .main .tit p, .footer div, .dingchan_header, .dingchan_main .tit .list li, .wodedingchan_header .center, .wodedingchan_main .none, .wo_header .heads, .wo_main .all .list {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* line 39, style.scss */
+.header, .nav ul, .main .tit .scroll2 ul, .wodedingchan_header, .wo_main .all .list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+/*  @extend  璋冪敤 */
+/*  @include  璋冪敤 */
+/* line 68, style.scss */
+.fl {
+  float: left; }
+
+/* line 71, style.scss */
+.fr {
+  float: right; }
+
+/* line 74, style.scss */
+.clear {
+  *zoom: 1; }
+
+/* line 75, style.scss */
+.clear:after {
+  content: '.';
+  display: block;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+  height: 0; }
+
+/*  @include  璋冪敤 */
+/*  @include  璋冪敤 */
+/* line 95, style.scss */
+html, body, .wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+/* line 100, style.scss */
+.wrap {
+  display: flex;
+  flex-direction: column; }
+
+/* line 104, style.scss */
+.header {
+  width: 100%;
+  height: 0.44rem;
+  padding: 0 0.1rem;
+  box-sizing: border-box;
+  background: #ffd400; }
+  /* line 110, style.scss */
+  .header div {
+    font-size: 0.11rem;
+    color: #666666; }
+    /* line 113, style.scss */
+    .header div .icon {
+      font-size: 0.2rem;
+      color: #000000; }
+  /* line 118, style.scss */
+  .header .header_center {
+    width: 2.2rem;
+    height: 0.24rem;
+    position: relative; }
+    /* line 121, style.scss */
+    .header .header_center input {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      outline: 0;
+      background: #eeeeee;
+      border-radius: 0.05rem;
+      padding-left: 0.32rem;
+      box-sizing: border-box;
+      color: #c0c0c0;
+      font-size: 0.11rem; }
+    /* line 133, style.scss */
+    .header .header_center .icon-search {
+      position: absolute;
+      left: 0.09rem;
+      top: 0.05rem;
+      font-size: 0.15rem; }
+
+/* line 141, style.scss */
+.nav {
+  width: 100%;
+  height: 0.39rem;
+  background: #ffd400; }
+  /* line 145, style.scss */
+  .nav ul {
+    width: 100%;
+    height: 0.39rem;
+    padding: 0 0.1rem;
+    box-sizing: border-box; }
+    /* line 151, style.scss */
+    .nav ul li {
+      color: #333333; }
+    /* line 155, style.scss */
+    .nav ul .active {
+      color: #ff0000; }
+
+/* line 161, style.scss */
+.main {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  background: #f6f6f6;
+  flex: 1;
+  margin-bottom: 0.1rem; }
+  /* line 168, style.scss */
+  .main .banner {
+    width: 100%;
+    height: 1.34rem; }
+    /* line 171, style.scss */
+    .main .banner .swiper-wrapper {
+      width: 100%;
+      height: 100%; }
+      /* line 173, style.scss */
+      .main .banner .swiper-wrapper .swiper-slide {
+        width: 100%;
+        height: 100%; }
+        /* line 175, style.scss */
+        .main .banner .swiper-wrapper .swiper-slide img {
+          width: 100%; }
+  /* line 181, style.scss */
+  .main .menu {
+    width: 100%;
+    height: 1.18rem;
+    margin-top: 0.1rem;
+    padding: 0 0.1rem;
+    box-sizing: border-box; }
+    /* line 187, style.scss */
+    .main .menu ul {
+      width: 100%;
+      height: 100%;
+      flex-wrap: wrap;
+      background: #ffffff; }
+      /* line 192, style.scss */
+      .main .menu ul li {
+        width: 22%;
+        height: 0.59rem;
+        flex-direction: column; }
+        /* line 197, style.scss */
+        .main .menu ul li .icon {
+          font-size: 0.2rem; }
+        /* line 200, style.scss */
+        .main .menu ul li span {
+          padding: 0 0 0.05rem; }
+  /* line 207, style.scss */
+  .main .tit {
+    width: 100%;
+    height: 0.39rem;
+    margin-top: 0.1rem;
+    padding: 0 0.1rem;
+    box-sizing: border-box; }
+    /* line 213, style.scss */
+    .main .tit p {
+      width: 100%;
+      height: 100%;
+      background: #ffffff; }
+      /* line 217, style.scss */
+      .main .tit p span {
+        padding: 0 0.09rem; }
+        /* line 219, style.scss */
+        .main .tit p span i {
+          color: #f00;
+          padding: 0 0.05rem 0 0; }
+      /* line 224, style.scss */
+      .main .tit p .icon {
+        vertical-align: middle;
+        color: #999999;
+        font-size: 0.2rem; }
+    /* line 230, style.scss */
+    .main .tit .scroll {
+      width: 100%;
+      height: 1.13rem;
+      overflow: hidden; }
+      /* line 234, style.scss */
+      .main .tit .scroll ul {
+        width: 160%;
+        height: 100%;
+        font-size: 0; }
+        /* line 238, style.scss */
+        .main .tit .scroll ul li {
+          display: inline-block;
+          margin: 0 0.05rem;
+          height: 100%; }
+          /* line 242, style.scss */
+          .main .tit .scroll ul li img {
+            width: 100%;
+            height: 100%; }
+    /* line 249, style.scss */
+    .main .tit .scroll1 {
+      height: 2rem; }
+    /* line 252, style.scss */
+    .main .tit .scroll2 {
+      height: 1.35rem; }
+      /* line 254, style.scss */
+      .main .tit .scroll2 ul {
+        width: 100%;
+        height: 100%;
+        justify-content: space-around; }
+        /* line 259, style.scss */
+        .main .tit .scroll2 ul li {
+          width: 25%; }
+          /* line 261, style.scss */
+          .main .tit .scroll2 ul li h5 {
+            font-size: 0.14rem;
+            height: 0.3rem;
+            line-height: 0.3rem;
+            text-align: center; }
+          /* line 267, style.scss */
+          .main .tit .scroll2 ul li span {
+            font-size: 0.12rem;
+            height: 0.2rem;
+            width: 100%;
+            display: inline-block;
+            line-height: 0.2rem;
+            text-align: center;
+            color: #333; }
+          /* line 276, style.scss */
+          .main .tit .scroll2 ul li img {
+            width: 0.8rem;
+            height: 0.7rem;
+            margin: 0.1rem 0rem 0 0rem; }
+
+/* line 287, style.scss */
+.footer {
+  width: 100%;
+  height: 0.49rem;
+  display: flex;
+  padding: 0 0.1rem;
+  box-sizing: border-box;
+  flex-shrink: 0; }
+  /* line 294, style.scss */
+  .footer div {
+    flex: 1;
+    flex-direction: column; }
+    /* line 298, style.scss */
+    .footer div .icon {
+      font-size: 0.2rem; }
+    /* line 301, style.scss */
+    .footer div span {
+      font-size: 0.14rem; }
+  /* line 305, style.scss */
+  .footer .active {
+    color: #ff0000; }
+
+/*dingchan*/
+/* line 313, style.scss */
+.dingchan_header {
+  width: 100%;
+  height: 0.44rem;
+  padding: 0 0.1rem;
+  box-sizing: border-box;
+  background: #ffd400;
+  flex-shrink: 0; }
+  /* line 321, style.scss */
+  .dingchan_header div {
+    width: 100%;
+    height: 0.25rem;
+    background: #eeeeee;
+    border-radius: 0.05rem;
+    padding-top: 0.05rem; }
+    /* line 327, style.scss */
+    .dingchan_header div input {
+      border: 0;
+      outline: 0;
+      width: 3.2rem;
+      background: transparent; }
+    /* line 333, style.scss */
+    .dingchan_header div .icon {
+      font-size: 0.2rem;
+      margin: 0.02rem 0.05rem;
+      vertical-align: middle; }
+
+/* line 341, style.scss */
+.dingchan_main {
+  width: 100%;
+  height: auto;
+  background: #f2f2f2;
+  overflow: auto;
+  flex-shrink: 1; }
+  /* line 347, style.scss */
+  .dingchan_main .tit {
+    height: 1.12rem;
+    width: 100%;
+    background: #ffffff;
+    margin-bottom: 0.1rem; }
+    /* line 352, style.scss */
+    .dingchan_main .tit h4 {
+      height: 0.44rem;
+      line-height: 0.44rem;
+      font-size: 0.16rem;
+      text-align: center; }
+    /* line 358, style.scss */
+    .dingchan_main .tit .list {
+      width: 100%;
+      height: auto;
+      display: flex; }
+      /* line 362, style.scss */
+      .dingchan_main .tit .list li {
+        flex: 1;
+        flex-direction: column; }
+        /* line 366, style.scss */
+        .dingchan_main .tit .list li .icon {
+          font-size: 0.2rem; }
+        /* line 369, style.scss */
+        .dingchan_main .tit .list li span {
+          font-size: 0.12rem; }
+  /* line 375, style.scss */
+  .dingchan_main .type {
+    width: 100%;
+    height: 1.44rem;
+    padding: 0 0.1rem;
+    box-sizing: border-box;
+    background: #ffffff; }
+    /* line 381, style.scss */
+    .dingchan_main .type div {
+      width: 1.7rem;
+      height: 1.25rem;
+      margin-top: 0.1rem; }
+      /* line 385, style.scss */
+      .dingchan_main .type div img {
+        width: 100%; }
+  /* line 390, style.scss */
+  .dingchan_main .china {
+    width: 100%;
+    height: auto;
+    margin-top: 0.1rem;
+    background: #ffffff; }
+    /* line 395, style.scss */
+    .dingchan_main .china h4 {
+      width: 100%;
+      height: 0.42rem;
+      line-height: 0.42rem;
+      text-align: center;
+      font-size: 0.16rem; }
+    /* line 402, style.scss */
+    .dingchan_main .china div {
+      width: 100%;
+      height: 2.5rem;
+      margin-bottom: 0.1rem; }
+      /* line 406, style.scss */
+      .dingchan_main .china div img {
+        width: 100%;
+        height: 100%; }
+
+/*wodedingchan*/
+/* line 420, style.scss */
+.wodedingchan_header {
+  width: 100%;
+  height: 0.44rem;
+  padding: 0 0.1rem;
+  box-sizing: border-box;
+  background: #ffd400;
+  flex-shrink: 0; }
+  /* line 428, style.scss */
+  .wodedingchan_header div {
+    flex: 1; }
+    /* line 430, style.scss */
+    .wodedingchan_header div .icon {
+      font-size: .2rem;
+      font-weight: 600; }
+  /* line 435, style.scss */
+  .wodedingchan_header .center {
+    font-size: 0.16rem; }
+
+/* line 441, style.scss */
+.wodedingchan_main {
+  width: 100%;
+  height: auto;
+  overflow: auto; }
+  /* line 445, style.scss */
+  .wodedingchan_main .none {
+    width: 100%;
+    height: auto;
+    flex-direction: column; }
+    /* line 450, style.scss */
+    .wodedingchan_main .none .icon {
+      font-size: 2rem;
+      color: #dadada; }
+    /* line 454, style.scss */
+    .wodedingchan_main .none p {
+      font-size: 0.16rem;
+      height: 0.7rem;
+      line-height: 0.7rem; }
+    /* line 459, style.scss */
+    .wodedingchan_main .none span {
+      padding: 0.12rem 0.22rem;
+      border: 1px solid #ed1941;
+      color: #ed1941;
+      font-size: 0.14rem; }
+
+/*wode*/
+/* line 473, style.scss */
+.wo_header {
+  width: 100%;
+  height: 1.75rem;
+  background: url(../images/wodeBg.png) no-repeat;
+  background-size: cover;
+  position: relative; }
+  /* line 479, style.scss */
+  .wo_header .icon {
+    position: absolute;
+    right: 0.35rem;
+    top: 0.1rem;
+    color: #ffffff;
+    font-size: 0.3rem; }
+  /* line 486, style.scss */
+  .wo_header .heads {
+    width: 100%;
+    height: 100%;
+    flex-direction: column; }
+    /* line 491, style.scss */
+    .wo_header .heads p {
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 100%;
+      overflow: hidden;
+      background: url(../images/heads.jpg) no-repeat;
+      background-size: 100% 100%;
+      background-position: 60%; }
+
+/* line 502, style.scss */
+.wo_main {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  background: #eeeeee;
+  flex: 1; }
+  /* line 508, style.scss */
+  .wo_main .border {
+    border-bottom: 1px solid #eeeeee; }
+  /* line 511, style.scss */
+  .wo_main .weight {
+    font-weight: 600;
+    font-size: 0.12rem; }
+  /* line 515, style.scss */
+  .wo_main .top {
+    width: 100%;
+    height: auto;
+    padding: 0 0.1rem;
+    box-sizing: border-box;
+    background: #fff;
+    margin-bottom: 0.1rem; }
+    /* line 522, style.scss */
+    .wo_main .top .tit {
+      height: 0.5rem;
+      box-sizing: border-box;
+      line-height: 0.5rem; }
+    /* line 527, style.scss */
+    .wo_main .top .rest {
+      height: 0.6rem;
+      margin-top: 0.15rem; }
+      /* line 530, style.scss */
+      .wo_main .top .rest h6 {
+        color: #ff0000;
+        font-size: 0.14rem; }
+  /* line 536, style.scss */
+  .wo_main .all {
+    width: 100%;
+    height: auto;
+    padding: 0 0.1rem;
+    box-sizing: border-box;
+    background: #ffffff; }
+    /* line 542, style.scss */
+    .wo_main .all .tit {
+      height: 0.5rem;
+      line-height: 0.5rem; }
+    /* line 546, style.scss */
+    .wo_main .all .list {
+      width: 100%;
+      height: 0.7rem; }
+      /* line 550, style.scss */
+      .wo_main .all .list li {
+        flex: 1;
+        flex-direction: column; }
+        /* line 554, style.scss */
+        .wo_main .all .list li .icon {
+          font-size: 0.2rem; }
+  /* line 560, style.scss */
+  .wo_main .two {
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+    padding: 0 0.1rem;
+    box-sizing: border-box; }
+    /* line 566, style.scss */
+    .wo_main .two .tit {
+      height: 0.5rem;
+      line-height: 0.5rem; }
+
+/*# sourceMappingURL=style.css.map */

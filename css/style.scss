@@ -1,0 +1,573 @@
+* {
+	margin: 0px;
+	padding: 0px; 
+	font-size:0.12rem;
+	font-weight:normal;
+	font-style:normal;
+	font-family:'Microsoft YaHei';
+}
+ul, li {
+	list-style: none; 
+}
+a{
+	text-decoration: none;
+	-webkit-tap-highlight-color:transparent;
+}
+html {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-size: 100px;
+}
+
+img, div, body, html, ul, li, a {
+	-webkit-touch-callout: none; 
+}
+
+input {
+	-webkit-appearance: none; 
+}
+
+%center{
+	  display:flex;
+	  justify-content:center;
+	  align-items:center;
+}
+%between{
+	  display:flex;
+	  justify-content:space-between;
+	  align-items:center;
+}
+
+%text{
+   white-space:nowrap;
+   overflow:hidden;
+   text-overflow:ellipsis;
+}
+%more{
+   word-break:break-all;
+   overflow:hidden;
+   -webkit-line-clamp:2;
+   -webkit-box-orient:vertical;
+   display:-webkit-box;
+}/*  @extend  调用 */
+
+@mixin flex($c,$x){
+	  display:flex;
+	  justify-content:$c;
+	  align-items:$x;
+}
+@mixin WH{
+	width: 100%;
+	height: 100%;
+}/*  @include  调用 */
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clear{*zoom:1;}
+.clear:after{
+	content:'.';
+	display: block;
+	clear: both;
+	overflow: hidden;
+	visibility: hidden;
+	height: 0;
+}
+
+@mixin colors($text, $background, $border) {
+  color: $text;
+  background-color: $background;
+  border-color: $border;
+}/*  @include  调用 */
+
+@mixin setWH($w,$h){
+	width: $w;
+	height: $h;
+}/*  @include  调用 */
+
+html,body,.wrap{
+	@include WH;
+	overflow: hidden;
+}
+
+.wrap{
+	display: flex;
+	flex-direction: column;
+}
+.header{
+	@include setWH(100%,0.44rem);
+	@extend %between;
+    padding: 0 0.1rem;
+    box-sizing: border-box;
+    background: #ffd400;
+    div{
+    	font-size: 0.11rem;
+    	color: #666666;
+    	.icon{
+    		font-size: 0.2rem;
+    		color: #000000;
+    	}
+    }
+    .header_center{
+       @include setWH(2.20rem,0.24rem);
+       position: relative;
+       input{
+       	width: 100%;
+       	height: 100%;
+       	border:0;
+       	outline: 0;
+       	background: #eeeeee;
+       	border-radius: 0.05rem;
+       	padding-left: 0.32rem;
+       	box-sizing: border-box;
+       	color: #c0c0c0;
+       	font-size: 0.11rem;
+       }
+       .icon-search{
+       	 position: absolute;
+       	 left: 0.09rem;
+       	 top:0.05rem;
+       	 font-size: 0.15rem;
+       }
+    }
+}
+.nav{
+	width: 100%;
+	height: 0.39rem;
+	background: #ffd400;
+	ul{
+		width: 100%;
+		height: 0.39rem;
+		padding: 0 0.1rem;
+		box-sizing: border-box;
+		@extend %between;
+		li{
+			@extend %center;
+			color: #333333;
+		}
+		.active{
+			color: #ff0000
+		}	
+	}
+}
+
+.main{
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	background: #f6f6f6;
+	flex:1;
+	margin-bottom: 0.1rem;
+	.banner{
+		width: 100%;
+		height: 1.34rem;
+		.swiper-wrapper{
+			@include WH;
+			.swiper-slide{
+				@include WH;
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
+	.menu{
+		width: 100%;
+		height: 1.18rem;
+		margin-top: 0.1rem;
+		padding: 0 0.1rem;
+		box-sizing: border-box;
+		ul{
+			@include WH;
+			@extend %center;
+			flex-wrap: wrap;
+			background: #ffffff;
+			li{
+               width: 22%;
+               height: 0.59rem;
+               flex-direction: column;
+               @extend %center;
+               .icon{
+               	font-size: 0.2rem;
+               }
+               span{
+               	 padding: 0 0 0.05rem ;
+               }
+			}
+		}
+	}
+
+	.tit{
+		width: 100%;
+		height: 0.39rem;
+		margin-top: 0.1rem;
+		padding: 0 0.1rem;
+		box-sizing: border-box;
+		p{
+			@include WH;
+			@extend %center;
+			background: #ffffff;
+			span{
+				padding: 0 0.09rem;
+				i{
+					color: #f00;
+					padding: 0 0.05rem 0 0;
+				}
+			}
+			.icon{
+				vertical-align: middle;
+				color: #999999;
+				font-size: 0.2rem;
+			}
+		}
+		.scroll{
+			width: 100%;
+			height: 1.13rem;
+			overflow: hidden;
+			ul{
+				width: 160%;
+				height:100%;
+				font-size: 0;
+				li{
+					display: inline-block;
+					margin: 0 0.05rem;
+					height: 100%;
+					img{
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+		}
+		.scroll1{
+           height: 2rem;
+		}
+		.scroll2{
+           height: 1.35rem;
+           ul{
+           	 width: 100%;
+           	 height: 100%;
+           	 @extend %between;
+           	 justify-content: space-around;
+           	 li{
+				width: 25%;
+                h5{
+                	font-size: 0.14rem;
+                	height: 0.3rem;
+                	line-height: 0.3rem;
+                	text-align: center;
+                }
+                span{
+                	font-size: 0.12rem;
+                	height: 0.2rem;
+                	width: 100%;
+                	display: inline-block;
+                	line-height: 0.2rem;
+                	text-align: center;
+                	color: #333;
+                }
+                img{
+                	width: 0.8rem;
+                	height: 0.7rem;
+                	margin: 0.1rem 0rem 0 0rem;
+                }
+			 }
+           }
+		}
+	}
+}
+
+.footer{
+	width: 100%;
+	height: 0.49rem;
+	display: flex;
+	padding: 0 0.1rem;
+	box-sizing: border-box;
+	flex-shrink: 0;
+	div{
+		flex:1;
+		@extend %center;
+		flex-direction: column;
+		.icon{
+			font-size: 0.2rem;
+		}
+		span{
+			font-size: 0.14rem;
+		}
+	}
+	.active{
+		color: #ff0000;
+	}
+}
+
+
+/*dingchan*/
+
+.dingchan_header{
+	width: 100%;
+	height: 0.44rem;
+	padding: 0 0.1rem;
+	box-sizing: border-box;
+	background: #ffd400;
+	flex-shrink: 0;
+	@extend %center;
+	div{
+		width:100%;
+		height: 0.25rem; 
+		background: #eeeeee;
+		border-radius: 0.05rem;
+		padding-top: 0.05rem;
+		input{
+			border:0;
+			outline: 0;
+			width: 3.2rem;
+            background: transparent;
+		}
+		.icon{
+			font-size: 0.2rem;
+			margin: 0.02rem 0.05rem;
+			vertical-align: middle;
+		}
+	}
+}
+
+.dingchan_main{
+    width: 100%;
+    height: auto;
+    background: #f2f2f2;
+    overflow: auto;
+    flex-shrink: 1;
+    .tit{
+      height: 1.12rem;
+      width: 100%;
+      background: #ffffff;
+      margin-bottom: 0.1rem;
+      h4{
+        height: 0.44rem;
+        line-height: 0.44rem;
+        font-size: 0.16rem;
+        text-align: center;
+      }
+      .list{
+      	 width: 100%;
+      	 height: auto;
+      	 display: flex;
+      	 li{
+      	 	flex:1;
+      	 	flex-direction: column;
+      	 	@extend %center;
+      	 	.icon{
+      	 		font-size: 0.2rem;
+      	 	}
+      	 	span{
+      	 		font-size: 0.12rem;
+      	 	}
+      	 }
+      }
+    }
+    .type{
+    	width: 100%;
+    	height: 1.44rem;
+    	padding: 0 0.1rem;
+    	box-sizing: border-box;
+    	background: #ffffff;
+    	div{
+    		width: 1.7rem;
+    		height: 1.25rem;
+    		margin-top: 0.1rem;
+    		img{
+    			width: 100%;
+    		}
+    	}
+    }
+    .china{
+    	width: 100%;
+    	height: auto;
+    	margin-top: 0.1rem;
+    	background: #ffffff;
+    	h4{
+    		width: 100%;
+    		height: 0.42rem;
+    		line-height: 0.42rem;
+    		text-align: center;
+    		font-size: 0.16rem;
+    	}
+    	div{
+    		width: 100%;
+    		height: 2.5rem;
+    		margin-bottom: 0.1rem;
+    		img{
+    			width: 100%;
+    			height: 100%;
+    		}
+    	}
+    }
+}
+
+
+
+/*wodedingchan*/
+
+
+
+.wodedingchan_header{
+    width: 100%;
+	height: 0.44rem;
+	padding: 0 0.1rem;
+	box-sizing: border-box;
+	background: #ffd400;
+	flex-shrink: 0;
+	@extend %between;
+	div{
+		flex:1;
+		.icon{
+		  font-size: .2rem;
+		  font-weight: 600;
+		}
+	}
+	.center{
+		@extend %center;
+		font-size: 0.16rem;
+	}
+}
+
+.wodedingchan_main{
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	.none{
+		width: 100%;
+		height: auto;
+		@extend %center;
+		flex-direction: column;
+		.icon{
+			font-size: 2rem;
+			color: #dadada;
+		}
+		p{
+			font-size: 0.16rem;
+			height: 0.7rem;
+			line-height: 0.7rem;
+		}
+		span{
+			padding: 0.12rem 0.22rem; 
+			border:1px solid #ed1941;
+			color: #ed1941;
+			font-size: 0.14rem;
+		}
+	}
+}
+
+
+
+/*wode*/
+
+
+.wo_header{
+	width: 100%;
+	height: 1.75rem;
+	background: url(../images/wodeBg.png) no-repeat ;
+	background-size: cover;
+	position: relative;
+	.icon{
+		position: absolute;
+		right:0.35rem;
+		top:0.1rem;
+		color: #ffffff;
+		font-size: 0.3rem;
+	}
+	.heads{
+		width: 100%;
+		height: 100%;
+		@extend %center;
+		flex-direction: column;
+		p{
+			width: 0.75rem;
+			height: 0.75rem;
+			border-radius: 100%;
+			overflow: hidden;
+			background: url(../images/heads.jpg) no-repeat;
+			background-size: 100% 100%;
+			background-position: 60%;
+		}
+	}
+}
+.wo_main{
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	background: #eeeeee;
+	flex: 1;
+	.border{
+		border-bottom: 1px solid #eeeeee;
+	}
+	.weight{
+		font-weight: 600;
+		font-size: 0.12rem;
+	}
+	.top{
+		width: 100%;
+		height: auto;
+		padding: 0 0.1rem;
+		box-sizing: border-box;
+		background: #fff;
+		margin-bottom: 0.1rem;
+		.tit{
+		    height: 0.5rem;
+		    box-sizing: border-box; 
+		    line-height: 0.5rem;	
+		}
+		.rest{
+			height: 0.6rem;
+			margin-top: 0.15rem;
+			h6{
+				color: #ff0000;
+				font-size: 0.14rem;
+			}
+		}
+	}
+	.all{
+		width: 100%;
+		height: auto;
+		padding: 0 0.1rem;
+		box-sizing: border-box;
+		background: #ffffff;
+		.tit{
+			height: 0.5rem;
+		    line-height: 0.5rem;
+		}
+		.list{
+			width: 100%;
+			height: 0.7rem;
+			@extend %center;
+			li{
+				flex:1;
+				@extend %between;
+				flex-direction: column;
+				.icon{
+					font-size: 0.2rem;
+				}
+			}
+		}
+	}
+	.two{
+		width: 100%;
+		height: auto;
+		background: #ffffff;
+		padding: 0 0.1rem;
+		box-sizing: border-box;
+		.tit{
+			height: 0.5rem;
+			line-height: 0.5rem;
+
+		}
+	}
+
+}
